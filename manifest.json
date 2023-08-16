@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "Copy Local",
+    "version": "1.1",
+    "description": "Extension copy paste local storage",
+    "permissions": [
+        "activeTab",
+        "storage",
+        "clipboardWrite",
+        "clipboardRead"
+    ],
+    "content_scripts": [
+        {
+          "matches": ["<all_urls>"],
+          "js": ["content.js"]
+        }
+    ],
+    "browser_action": {
+        "default_title": "Copy Local",
+        "default_popup": "popup.html"
+    }
+}
